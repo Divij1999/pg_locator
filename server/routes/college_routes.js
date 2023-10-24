@@ -1,10 +1,15 @@
 const router = require("express-promise-router")();
 
-const { insert_college } = require("../controllers/college_controller");
+const {
+  insert_college,
+  get_all_colleges,
+  get_college_pg,
+} = require("../controllers/college_controller");
 
 router.post("/", insert_college);
-router.get("/", async (req, res) => {
-  res.end("it works");
-});
+
+router.get("/", get_all_colleges);
+
+router.get("/college/:id", get_college_pg);
 
 module.exports = router;
