@@ -7,7 +7,7 @@ const get_pg = async (req, res) => {
     const { id } = req.params;
     const queryText = "SELECT * FROM pg WHERE pg_id = $1";
     const result = await pool.query(queryText, [id]);
-    res.json(result);
+    res.json(result.rows);
   } catch (e) {
     throw e;
   }

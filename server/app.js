@@ -14,7 +14,7 @@ app.use(logger("dev"));
 app.use(cors());
 app.use(express.json());
 
-app.use("/", college_router);
-app.use("/", pg_router);
+app.use("/colleges", college_router);
+app.use("/pg", pg_router);
 
 module.exports = app;

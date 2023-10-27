@@ -10,6 +10,6 @@ router.post("/", insert_college);
 
 router.get("/", get_all_colleges);
 
-router.get("/college/:id", get_college_pg);
+router.get("/:id", get_college_pg);
 
 module.exports = router;

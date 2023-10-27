@@ -26,7 +26,7 @@ const get_all_colleges = async (req, res) => {
   try {
     const queryText = "SELECT * FROM college";
     const result = await pool.query(queryText);
-    res.json(result);
+    res.json(result.rows);
   } catch (e) {
     throw e;
   }
@@ -40,7 +40,7 @@ const get_college_pg = async (req, res) => {
     const queryText =
       "SELECT * FROM pg INNER JOIN (SELECT pg_id FROM college_pg WHERE college_id = $1) AS pgs ON pg.pg_id = pgs.pg_id;";
     const result = await pool.query(queryText, [id]);
-    res.json(result);
+    res.json(result.rows);
   } catch (e) {
     throw e;
   }
