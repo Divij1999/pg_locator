@@ -18,13 +18,13 @@ const insert_pg = async (req, res) => {
   try {
     await client.query("BEGIN");
 
-    const { address, owner_contact, price, gender_requirement } = req.body;
+    const { pg_address, owner_contact, pg_rent, gender_requirement } = req.body;
     const queryText =
-      "INSERT INTO pg (address, owner_contact, price, gender_requirement) VALUES($1, $2, $3, $4) RETURNING *";
+      "INSERT INTO pg (pg_address, owner_contact, pg_rent, gender_requirement) VALUES($1, $2, $3, $4) RETURNING *";
     const result = await client.query(queryText, [
-      address,
+      pg_address,
       owner_contact,
-      price,
+      pg_rent,
       gender_requirement,
     ]);
 
