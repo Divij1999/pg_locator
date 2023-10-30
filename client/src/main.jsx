@@ -5,7 +5,10 @@ import App from "./App.jsx";
 import CollegeList, { get_colleges } from "./routes/CollegeList.jsx";
 import PgList, { get_pg_list } from "./routes/PgList.jsx";
 import PgDetails, { get_pg_details } from "./routes/PgDetails.jsx";
-import AddPgForm from "./routes/AddPgForm.jsx";
+import AddPgForm, {
+  get_colleges_for_form,
+  submitPgData,
+} from "./routes/AddPgForm.jsx";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +32,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/pg/add-pg",
-
+        loader: get_colleges_for_form,
+        action: submitPgData,
         element: <AddPgForm />,
       },
     ],

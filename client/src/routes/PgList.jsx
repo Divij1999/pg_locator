@@ -1,6 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import PgCard from "../components/PgCard.jsx";
 
+// Loader for getting the list of associated PGs
+
 export const get_pg_list = async ({ params }) => {
   const response = await fetch(`http://localhost:3000/colleges/${params.id}`, {
     method: "GET",

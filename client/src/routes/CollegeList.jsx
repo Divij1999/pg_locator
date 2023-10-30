@@ -1,6 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import CollegeCard from "../components/CollegeCard.jsx";
 
+// Loader for getting the college list
+
 export const get_colleges = async () => {
   const response = await fetch("http://localhost:3000/colleges", {
     method: "GET",
