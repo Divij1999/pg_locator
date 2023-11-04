@@ -1,0 +1,18 @@
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.collegeCard {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 14vw;
+  height: 12vw;
+  justify-content: space-around;
+  overflow: hidden;
+}

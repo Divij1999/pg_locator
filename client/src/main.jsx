@@ -26,12 +26,12 @@ const router = createBrowserRouter([
         element: <PgList />,
       },
       {
-        path: "/pg/:id",
+        path: "/colleges/pg/:id",
         loader: get_pg_details,
         element: <PgDetails />,
       },
       {
-        path: "/pg/add-pg",
+        path: "/colleges/pg/add-pg",
         loader: get_colleges_for_form,
         action: submitPgData,
         element: <AddPgForm />,

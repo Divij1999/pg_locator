@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import PgCard from "../components/PgCard.jsx";
-
+import "../stylesheets/pgList.css";
 // Loader for getting the list of associated PGs
 
 export const get_pg_list = async ({ params }) => {
@@ -16,7 +16,7 @@ const PgList = () => {
   console.log(pg_list);
 
   return (
-    <div>
+    <div className="pgList">
       <>
         {pg_list.map((pg) => (
           <PgCard

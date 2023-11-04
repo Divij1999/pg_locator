@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, Form, redirect } from "react-router-dom";
-
+import "../stylesheets/addPgForm.css";
 // Loader for getting the college list to show in the options
 
 export const get_colleges_for_form = async () => {
@@ -73,7 +73,7 @@ const AddPgForm = () => {
 
   // Form here is react-router form. It initiates an Action when the method is put, post , delete etc.
   return (
-    <Form method="post">
+    <Form method="post" className="addPgForm">
       <label>
         Address:
         <input
@@ -117,6 +117,7 @@ const AddPgForm = () => {
         </select>
       </label>
       <label>
+        Associated College:
         <select
           name="college_id"
           value={pgDetails.college_id}

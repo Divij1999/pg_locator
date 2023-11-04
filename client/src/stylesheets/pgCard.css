@@ -1,0 +1,8 @@
+.pgCard {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 14vw;
+  height: 12vh;
+}
