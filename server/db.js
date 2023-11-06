@@ -8,8 +8,9 @@ const Pool = require("pg").Pool;
 //   port: process.env.DB_PORT,
 // });
 
+const connectionString = "postgres://pglocator_user:xsAVhXfApw7OufbJPTscNWFTPDWkQQyi@dpg-cl48b7biu76s73b6hgig-a/pglocator";
 const pool = new Pool({
-  "postgres://pglocator_user:xsAVhXfApw7OufbJPTscNWFTPDWkQQyi@dpg-cl48b7biu76s73b6hgig-a/pglocator",
+  connectionString,
 });
 
 /* It is a good measure to run queries during a transaction through a client rather than 
