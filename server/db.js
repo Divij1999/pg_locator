@@ -9,7 +9,7 @@ const Pool = require("pg").Pool;
 // });
 
 const pool = new Pool({
-  process.env.DB_CONN_STR,
+  "postgres://pglocator_user:xsAVhXfApw7OufbJPTscNWFTPDWkQQyi@dpg-cl48b7biu76s73b6hgig-a/pglocator",
 });
 
 /* It is a good measure to run queries during a transaction through a client rather than 
