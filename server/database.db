@@ -1,9 +1,9 @@
 CREATE TABLE pg (
     pg_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    address TEXT NOT NULL,
+    pg_address TEXT NOT NULL,
     owner_contact TEXT NOT NULL,
-    price INT NOT NULL,
-    gender_requirement VARCHAR(3) NOT NULL
+    pg_rent INT NOT NULL,
+    gender_requirement VARCHAR(4) NOT NULL
 );
 
 CREATE TABLE college (

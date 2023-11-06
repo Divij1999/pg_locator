@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, Form, redirect } from "react-router-dom";
-import "../stylesheets/addPgForm.css";
+// import "../stylesheets/addPgForm.css";
 // Loader for getting the college list to show in the options
 
 export const get_colleges_for_form = async () => {
@@ -21,14 +21,15 @@ export const submitPgData = async ({ request }) => {
   const jsonData = Object.fromEntries(data);
 
   // Converting the rent and college_id fields from String to Int
-  for (let [key, value] of Object.entries(jsonData)) {
-    if (key == "rent" || key == "college_id") {
-      value = +value;
-    }
-  }
+  // for (let [key, value] of Object.entries(jsonData)) {
+  //   if (key == "rent" || key == "college_id") {
+  //     value = +value;
+  //   }
+  // }
 
+  console.log(jsonData);
   // Sending the fetch request
-  const response = await fetch("http://localhost:3000/pg/add-pg", {
+  const response = await fetch("http://localhost:3000/colleges/pg/add-pg", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -53,7 +54,7 @@ const AddPgForm = () => {
     owner_contact: "",
     pg_rent: "",
     gender_requirement: "none",
-    college_id: collegeData[0].college_id,
+    college_id: `${collegeData[0].college_id}`,
   });
 
   // Changing the state object whenever anything is typed in the input or selected from the options to form controlled components
@@ -73,7 +74,7 @@ const AddPgForm = () => {
 
   // Form here is react-router form. It initiates an Action when the method is put, post , delete etc.
   return (
-    <Form method="post" className="addPgForm">
+    <Form method="post" className="">
       <label>
         Address:
         <input

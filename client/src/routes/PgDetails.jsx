@@ -1,9 +1,12 @@
 import { useLoaderData } from "react-router-dom";
 
 export const get_pg_details = async ({ params }) => {
-  const response = await fetch(`http://localhost:3000/pg/${params.id}`, {
-    method: "GET",
-  });
+  const response = await fetch(
+    `http://localhost:3000/colleges/pg/${params.id}`,
+    {
+      method: "GET",
+    }
+  );
   return response;
 };
 

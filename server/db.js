@@ -8,6 +8,12 @@ const pool = new Pool({
   port: process.env.DB_PORT,
 });
 
+// const connectionString =
+//   "postgres://pglocator_user:xsAVhXfApw7OufbJPTscNWFTPDWkQQyi@dpg-cl48b7biu76s73b6hgig-a.singapore-postgres.render.com/pglocator?sslmode=no-verify";
+// const pool = new Pool({
+//   connectionString,
+// });
+
 /* It is a good measure to run queries during a transaction through a client rather than 
 using pool.query as this allows us to BEGIN, COMMIT, ROLLBACK the query through a single connection.
 A Pool just grabs the first available client to run the query and releases it. With a SELECT it is not 
