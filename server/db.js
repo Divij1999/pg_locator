@@ -9,7 +9,7 @@ const Pool = require("pg").Pool;
 // });
 
 const pool = new Pool({
-  DB_CONN_STR,
+  process.env.DB_CONN_STR,
 });
 
 /* It is a good measure to run queries during a transaction through a client rather than 
