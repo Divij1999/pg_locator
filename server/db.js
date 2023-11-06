@@ -10,7 +10,7 @@ const Pool = require("pg").Pool;
 
 const pool = new Pool({
   DB_CONN_STR,
-})
+});
 
 /* It is a good measure to run queries during a transaction through a client rather than 
 using pool.query as this allows us to BEGIN, COMMIT, ROLLBACK the query through a single connection.
