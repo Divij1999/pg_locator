@@ -9,12 +9,17 @@ import AddPgForm, {
   get_colleges_for_form,
   submitPgData,
 } from "./routes/AddPgForm.jsx";
+import Homepage from "./components/Homepage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
+      {
+        path: "/",
+        element: <Homepage />,
+      },
       {
         path: "/colleges/",
         loader: get_colleges,

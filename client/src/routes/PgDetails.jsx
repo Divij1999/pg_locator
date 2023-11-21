@@ -13,9 +13,12 @@ export const get_pg_details = async ({ params }) => {
 const PgDetails = () => {
   const { pg_address, owner_contact, pg_rent, gender_requirement } =
     useLoaderData()[0];
-  console.log(useLoaderData());
+
   return (
-    <div>
+    <div className="detail_container">
+      <div>
+        <img src="../room.jpeg" alt="" />
+      </div>
       <div>Address: {pg_address}</div>
       <div>Contact: {owner_contact}</div>
       <div>Rent: {pg_rent} </div>

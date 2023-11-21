@@ -1,8 +1,44 @@
-.pgCard {
-  border: 1px solid black;
+.pgcard {
+  box-shadow: 3px 3px 4px grey;
+  border: 1px solid grey;
+  border-radius: 15%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 14vw;
-  height: 12vh;
+  width: 20vw;
+  height: 30vh;
+  gap: 2px;
+  overflow: hidden;
+}
+
+.pgimg {
+  width: 100%;
+  height: 70%;
+}
+
+.pgimg img {
+  width: 100%;
+  height: 100%;
+}
+
+.pgdetails {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex-grow: 1;
+  justify-content: flex-end;
+  text-overflow: ellipsis;
+}
+
+.link_pg {
+  background-color: lightblue;
+  padding: 2px;
+  color: white;
+  border-radius: 20%;
+  width: 30%;
+}
+.pgcard button {
+  align-self: flex-end;
+  margin-right: 10px;
 }

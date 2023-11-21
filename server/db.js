@@ -1,18 +1,18 @@
 const Pool = require("pg").Pool;
 
-const pool = new Pool({
-  user: process.env.DB_USER,
-  host: process.env.DB_HOST,
-  database: process.env.DATABASE,
-  password: process.env.DB_PASSWORD,
-  port: process.env.DB_PORT,
-});
-
-// const connectionString =
-//   "postgres://pglocator_user:xsAVhXfApw7OufbJPTscNWFTPDWkQQyi@dpg-cl48b7biu76s73b6hgig-a.singapore-postgres.render.com/pglocator?sslmode=no-verify";
 // const pool = new Pool({
-//   connectionString,
+//   user: process.env.DB_USER,
+//   host: process.env.DB_HOST,
+//   database: process.env.DATABASE,
+//   password: process.env.DB_PASSWORD,
+//   port: process.env.DB_PORT,
 // });
+
+const connectionString =
+  "postgres://pglocator_user:xsAVhXfApw7OufbJPTscNWFTPDWkQQyi@dpg-cl48b7biu76s73b6hgig-a.singapore-postgres.render.com/pglocator?sslmode=no-verify";
+const pool = new Pool({
+  connectionString,
+});
 
 /* It is a good measure to run queries during a transaction through a client rather than 
 using pool.query as this allows us to BEGIN, COMMIT, ROLLBACK the query through a single connection.

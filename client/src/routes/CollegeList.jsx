@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import CollegeCard from "../components/CollegeCard.jsx";
-// import "../stylesheets/collegeList.css";
+import "../stylesheets/collegeList.css";
 
 // Loader for getting the college list
 
@@ -16,9 +16,9 @@ const CollegeList = () => {
   console.log(college_list);
 
   return (
-    <div className="c">
-      <div className="">College List</div>
-      <div className="">
+    <div className="list_container">
+      <div className="heading">College List</div>
+      <div className="collegelist">
         {college_list.map((college) => (
           <CollegeCard
             key={college.college_id}

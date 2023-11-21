@@ -1,5 +1,8 @@
-.pgList {
+.pglist {
   display: flex;
   gap: 2vw;
+  justify-content: center;
+  margin-top: 12vh;
   flex-wrap: wrap;
+  padding: 10px;
 }

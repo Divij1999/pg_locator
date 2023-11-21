@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, Form, redirect } from "react-router-dom";
-// import "../stylesheets/addPgForm.css";
+import "../stylesheets/addPgForm.css";
 // Loader for getting the college list to show in the options
 
 export const get_colleges_for_form = async () => {
@@ -74,9 +74,10 @@ const AddPgForm = () => {
 
   // Form here is react-router form. It initiates an Action when the method is put, post , delete etc.
   return (
-    <Form method="post" className="">
-      <label>
-        Address:
+    <Form method="post" className="addpgform">
+      <div className="formheading">Enter PG Details</div>
+      <label className="address inputgroup">
+        <div>Address:</div>
         <input
           type="text"
           name="pg_address"
@@ -85,8 +86,8 @@ const AddPgForm = () => {
           required={true}
         />
       </label>
-      <label>
-        Contact:
+      <label className="contact inputgroup">
+        <div>Contact</div>
         <input
           type="text"
           name="owner_contact"
@@ -95,8 +96,8 @@ const AddPgForm = () => {
           required={true}
         />
       </label>
-      <label>
-        Rent:
+      <label className="rent inputgroup">
+        <div>Rent</div>
         <input
           type="number"
           name="pg_rent"
@@ -105,8 +106,8 @@ const AddPgForm = () => {
           required={true}
         />
       </label>
-      <label>
-        Gender Requirement:
+      <label className="gender inputgroup">
+        <div>Gender Requirement</div>
         <select
           name="gender_requirement"
           value={pgDetails.gender_requirement}
@@ -117,8 +118,8 @@ const AddPgForm = () => {
           <option value="none">None</option>
         </select>
       </label>
-      <label>
-        Associated College:
+      <label className="college inputgroup">
+        <div>Associated College</div>
         <select
           name="college_id"
           value={pgDetails.college_id}

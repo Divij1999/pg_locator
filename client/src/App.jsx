@@ -1,10 +1,11 @@
 import { Outlet } from "react-router-dom";
-// import "./stylesheets/app.css";
-
+import NavBar from "./components/NavBar";
+import "./stylesheets/app.css";
 const App = () => {
   return (
-    <div className="">
-      App
+    <div className="app">
+      <NavBar className="navbar" />
+
       <Outlet />
     </div>
   );

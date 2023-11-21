@@ -1,6 +1,27 @@
-.addPgForm {
+.addpgform {
   display: flex;
   flex-direction: column;
+  padding: 25px;
+  margin-top: 12vh;
   width: 30vw;
-  gap: 1vh;
+  gap: 2vh;
+  border: 1px solid grey;
+  border-radius: 10%;
+}
+
+.inputgroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.addpgform button {
+  width: 30%;
+  align-self: center;
+}
+
+.formheading {
+  text-decoration: solid;
+  font-weight: bold;
+  text-align: center;
+  font-size: larger;
 }

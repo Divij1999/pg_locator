@@ -1,0 +1,35 @@
+.links {
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+  height: 100%;
+}
+
+.college_link a {
+  color: white;
+  border-right: 1px solid grey;
+  margin-right: 14px;
+  padding-right: 10px;
+}
+
+.add_pg a {
+  color: white;
+  border-left: 1px solid grey;
+
+  padding-left: 10px;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  padding: 5px;
+  background-color: black;
+  border-bottom: 1px solid grey;
+  position: fixed;
+}
+
+.logo {
+  width: 5vw;
+}

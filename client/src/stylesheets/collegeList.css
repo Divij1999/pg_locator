@@ -1,8 +1,25 @@
-.collegeList {
+.collegelist {
   display: flex;
   height: 100%;
   width: 100%;
   gap: 2vw;
   justify-content: center;
+
   flex-wrap: wrap;
+}
+
+.heading {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.list_container {
+  width: 80%;
+  height: 100%;
+  margin-top: 12vh;
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
 }
